@@ -1,0 +1,136 @@
+body
+	color: #333
+	font-family: "Fira Sans"
+	font-size: 16px
+	font-weight: 400
+	min-width: 940px
+
+.container
+	width: 960px
+	margin: 0 auto
+	+clr
+
+.site-header
+	padding-top: 22px
+	min-height: 936px
+	background-image: url(../img/header-bg.png)
+	box-shadow: inset 0px -137px 160px 0px rgba(0,0,0,0.1)
+	position: relative
+	+cover
+	&__granules
+		background-image: url(../img/granules.png)
+		z-index: 1
+		+cover
+
+.header-top
+	+clr
+	&__logo
+		float: left
+	&__contact
+		float: right
+	&__phone
+		color: white
+		font-size: 24px
+		font-weight: 700
+		margin-right: 55px
+		vertical-align: middle
+		text-decoration: none
+
+.btn
+	font-weight: 700
+	border-radius: 5px
+
+
+.btn-yellow
+	+gh(#ffd93c, #fcb228)
+	width: 200px
+	height: 40px
+	color: #805500
+	font-size: 16px
+	font-weight: 700
+	box-shadow: 0 4px 0 0 #8e6507
+
+.right-sec
+	float: right
+	margin-top: 37px
+	margin-bottom: 25px
+	.slogan
+		color: white
+		font-size: 42px
+		font-weight: 700
+		line-height: 1
+		margin-bottom: 31px
+		text-align: center
+	.vendor
+		width: 480px
+		min-height: 34px
+		background-color: #fff
+		text-align: center
+		line-height: 34px
+		color: #466d7f
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 20px
+	.benefit
+		color: white
+		font-size: 24px
+		font-weight: 400
+		text-align: center
+
+.hero
+	background-image: url(../img/hero-bg.jpg)
+	width: 960px
+	min-height: 360px
+	clear: both
+	position: relative
+	+cover
+	&__shadow
+		position: absolute
+		background-image: url(../img/hero-shadow.png)
+		width: 993px
+		height: 33px
+		opacity: 0.7
+		bottom: -40px
+		left: -15px
+	&__machine
+		position: absolute
+		top: -198px
+		left: 40px
+	&__in
+		float: right
+		text-align: center
+		width: 307px
+		margin-right: 80px
+		margin-top: 40px
+	h1
+		color: black
+		font-size: 18px
+		font-weight: 700
+		margin-bottom: 25px
+		line-height: 1.15
+	input
+		border: 1px solid #d58b2d
+		border-radius: 5px
+		padding: 11px 50px
+		color: #484848
+		font-size: 16px
+		font-weight: 400
+		margin-bottom: 10px
+		width: 242px
+		+placeholder
+			color: #484848
+	button
+		display: block
+		+gh(#fe3e41, #e72829)
+		padding: 20px 70px
+		color: white
+		font-size: 20px
+		font-weight: 700
+		display: inline-block
+		box-shadow: 0 5px 0 0 #b01e1c, 0 10px 15px rgba(79, 0, 6, 0.55)
+		&:active
+			box-shadow: none
+			margin-top: 5px
+
+

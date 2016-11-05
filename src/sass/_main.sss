@@ -46,6 +46,15 @@ body
 .btn
 	font-weight: 700
 	border-radius: 5px
+	&--red
+		+gh(#fe3e41, #e72829)
+		color: white
+		font-size: 20px
+		font-weight: 700
+		box-shadow: 0 5px 0 0 #b01e1c, 0 10px 15px rgba(79, 0, 6, 0.55)
+		&:active
+			box-shadow: none
+			margin-top: 5px
 
 
 .btn-yellow
@@ -129,20 +138,210 @@ body
 		width: 242px
 		+placeholder
 			color: #484848
-	button
-		display: block
-		+gh(#fe3e41, #e72829)
+	.btn-submit
 		padding: 20px 70px
+
+.diff
+	background-image: url(../img/section2-bg.jpg)
+	padding-top: 70px
+	padding-bottom: 90px
+	min-height: 1080px
+	+cover
+	&__heading
+		text-align: center
+		color: white
+		font-size: 42px
+		font-weight: 700
+		margin-bottom: 30px
+
+.diff-cols
+	ul
+		& + ul
+			margin-top: 15px
+	li
+		width: 300px
+		display: inline-block
+		border-top: 5px solid #f94043
+		vertical-align: top
+		padding-top: 10px
+		& + li
+			margin-left: 25px
+	figcaption
+		margin-top: 25px
+		color: white
+		h1
+			font-size: 24px
+			font-weight: 700
+			margin-bottom: 15px
+		p
+			font-size: 16px
+			font-weight: 400
+	.fig-wrap
+		width: 300px
+		height: 201px
+		border: 1px solid #7c808c
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.75)
+		img
+			width: 100%
+			height: auto
+
+.catalog
+	padding-top: 60px
+	&__heading
+		text-align: center
+		color: black
+		font-size: 42px
+		font-weight: 700
+		margin-bottom: 5px
+	&__hr
+		width: 100px
+		height: 5px
+		background-color: #f94043
+		border: none
+		margin-bottom: 40px
+	&__slider
+		width: 480px
+		vertical-align: top
+		display: inline-block
+		margin-right: 50px
+		margin-bottom: 50px
+	&__slide
+		width: 480px
+		height: 360px
+		border: 10px solid white
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.35)
+		img
+			max-width: 100%
+			height: 340px
+			max-height: 100%
+			display: inline-block
+	&__desc
+		width: 420px
+		display: inline-block
+		h1
+			line-height: 1.1
+			margin-bottom: 25px
+			color: #333
+			font-size: 32px
+			font-weight: 400
+		.btn
+			padding: 18px 30px
+			margin-bottom: 30px
+		p
+			color: #333
+			font-size: 15px
+			font-weight: 400
+			line-height: 24px
+
+.slider-nav
+	margin-top: 35px
+	margin-left: 30px
+	img
+		width: 100%
+		height: auto
+
+.navimg-wrap
+	width: 116px
+	height: 84px
+	border: 3px solid white
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.35)
+	&:first-child
+		margin-left: 0
+
+.catalog__nav
+	margin-left: 25px
+	&:first-child
+		margin-left: 0
+	&.slick-current
+		&:after
+			content: ''
+			display: inline-block
+			width: 115px
+			height: 5px
+			background-color: #f94043
+			margin-bottom: 5px
+			margin-left: 1px
+
+.catalog__spec
+	width: 960px
+	background-color: white
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.35)
+	padding-top: 40px
+	padding-bottom: 20px
+	h1
+		text-align: center
+		margin-bottom: 30px
+	table
+		border-collapse: collapse
+		border-spacing: 0
+		border: 1px solid #999
+		width: 918px
+		margin: 0 auto
+		position: relative
+		z-index: 1
+		tr
+			border: 1px solid #999
+			color: #333
+			font-size: 14px
+			font-weight: 700
+			&:nth-child(even)
+				background-color: #f8f8f8
+			&:first-child
+				td
+					border: 1px solid #999
+		td
+			border: 1px solid #999
+			&:first-child
+				width: 320px
+				padding: 15px 20px
+			&:nth-child(2)
+				box-sizing: border-box
+				border-collapse: collapse
+		.table__red
+			color: red
+			border-right: 5px solid #f94043
+			border-left: 5px solid #f94043
+			border-top: 1px solid #f94043
+			border-bottom: 1px solid #f94043
+			&.bottom
+				border-bottom: 5px solid #f94043
+			&.top
+				border-top: 5px solid #f94043
+
+.table__radio
+	input[type=radio]
+		display: none
+		& + label i
+			width: 20px
+			height: 20px
+			border: 2px solid #999
+			box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.35)
+			display: inline-block
+			padding: 5px
+			vertical-align: middle
+			cursor: pointer
+			border-radius: 50%
+			background-color: white
+		&:checked + label i
+			background-image: url(../img/radio-btn.png)
+			background-color: transparent
+			box-shadow: none
+			border: none
+
+.table-bottom
+	width: 918px
+	min-height: 146px
+	border: 1px solid #999
+	margin: 0 auto
+	background-image: url(../img/table-bottom-bg.jpg)
+	background-repeat: repeat
+	text-align: center
+	padding-top: 40px
+	position: relative
+	z-index: 0
+	margin-top: -5px
+	.btn
 		color: white
 		font-size: 20px
 		font-weight: 700
-		display: inline-block
-		box-shadow: 0 5px 0 0 #b01e1c, 0 10px 15px rgba(79, 0, 6, 0.55)
-		&:active
-			box-shadow: none
-			margin-top: 5px
-
-.section2
-	background-image: url(../img/section2-bg.png)
-	min-height: 1080px
-	+cover
+		padding: 18px 22px

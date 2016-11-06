@@ -1,8 +1,10 @@
 // example of simple includes for js
-var $ = require('jquery');
+const $ = require('jquery');
 window.jQuery = $;
 window.$ = $;
-var slick = require('slick-carousel');
+const slick = require('slick-carousel');
+const lightbox = require('lightbox2');
+const mask = require('jquery.maskedinput');
 
 $('.slider-for').slick({
   slidesToShow: 1,
@@ -13,7 +15,7 @@ $('.slider-for').slick({
 });
 
 $('.slider-nav').slick({
-  slidesToShow: 2,
+  slidesToShow: 3,
   slidesToScroll: 1,
   asNavFor: '.slider-for',
   centerMode: true,
@@ -43,35 +45,96 @@ $('.table__radio').on('click', 'input[type=radio]', function(e) {
     if ($this.closest('td').index() == 1) {
         $('.skidka_table td').removeClass('table__red top bottom');
         tFirst.addClass('table__red');
+        $('.js-value').text('АТМ-10');
     } else if ($this.closest('td').index() == 2) {
         $('.skidka_table td').removeClass('table__red top bottom');
         tSecond.addClass('table__red');
+        tSecond.closest('.tr-top').addClass('.top-red');
+        $('.js-value').text('АТМ-15');
     } else if ($this.closest('td').index() == 3) {
         $('.skidka_table td').removeClass('table__red top bottom');
         tThird.addClass('table__red');
+        $('.js-value').text('АТМ-20');
     } else if ($this.closest('td').index() == 4) {
         $('.skidka_table td').removeClass('table__red top bottom');
         tFourth.addClass('table__red');
+        $('.js-value').text('АТМ-25');
     } else if ($this.closest('td').index() == 5) {
         $('.skidka_table td').removeClass('table__red top bottom');
         tFifth.addClass('table__red');
+        $('.js-value').text('АТМ-34');
     } else if ($this.closest('td').index() == 6) {
         $('.skidka_table td').removeClass('table__red top bottom');
         tSixth.addClass('table__red');
+        $('.js-value').text('АТМ-45');
     } else if ($this.closest('td').index() == 7) {
         $('.skidka_table td').removeClass('table__red top bottom');
         tSeventh.addClass('table__red');
+        $('.js-value').text('АТМ-60');
     } else {
         $('.skidka_table td').removeClass('table__red top bottom');
         tEighth.addClass('table__red');
+        $('.js-value').text('АТМ-75');
     }
 
-    if ( $('tr:nth-child(2)').find('.table__red').length ) {
-        $('tr:nth-child(2)').find('td.table__red').addClass('top');
+    if ( $('tr:nth-child(1)').find('.table__red').length ) {
+        $('tr:nth-child(1)').find('td.table__red').addClass('top');
+        $('.table-top').css('margin-bottom', '-3px');
+        $('.table-bottom').css('margin-top', '-3px');
     }
     if ( $('tr:last-child').find('.table__red').length ) {
         $('tr:last-child').find('td.table__red').addClass('bottom');
     }
 
 });
+
+
+lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'albumLabel': ''
+});
+
+$('.js-form').on('click', function() {
+    $('.js-popup').addClass('is-active');
+    $('.overlay').removeClass('is-active');
+
+    return false;
+});
+$('.overlay').on('click', function() {
+    $(this).removeClass('is-active');
+    $('.js-popup').removeClass('is-active');
+    return false;
+});
+
+$('.js-form1').on('click', function() {
+    $('.js-popup1').addClass('is-active');
+    $('.overlay').removeClass('is-active');
+
+    return false;
+});
+
+$('.js-form2').on('click', function() {
+    $('.js-popup2').addClass('is-active');
+    $('.overlay').removeClass('is-active');
+
+    return false;
+});
+
+$('.overlay').on('click', function() {
+    $(this).removeClass('is-active');
+    $('.js-popup1').removeClass('is-active');
+    $('.js-popup2').removeClass('is-active');
+    return false;
+});
+
+
+$('.js-close').on('click', () => {
+    $('.overlay').removeClass('is-active');
+    $('.js-popup1').removeClass('is-active');
+    $('.js-popup2').removeClass('is-active');
+    $('.js-popup').removeClass('is-active');
+})
+
+$('input[type=tel]').mask("+7 (999) 999-99-99");
 

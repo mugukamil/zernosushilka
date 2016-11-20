@@ -4,7 +4,6 @@
   <head>
     <meta charset="utf-8">
     <title>Агропрограмма</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
@@ -19,30 +18,29 @@
 
       <a href="#x" class="thanks-overlay" id="thanks"></a>
       <div class="thanks-popup">
-        <center>
-          <img src="img/th.png"><br><br>
-          <span style="font-family:HelveticaNeueCyr-Light;text-align:center;font-size:32px;color:#000;">Спасибо! Ваша заявка отправлена!</span><br>
-          <span style="font-family:HelveticaNeueCyr-Light;font-size:16px;color:#000;">Наш специалист перезвонит Вам  в течении 10 минут.</span> <br>
-          <div style="position:fixed;top:-39px;margin-left:205px;left:50%;">
-            <a class="close" title="Закрыть" href="#close"><img src="img/close-thanks.png" class="b69"></a>
-          </div>
-        </center>
-        <a class="close" title="Закрыть" href="#close"></a>
+        <div class="popup__inner">
+          <a href="#close" class="icon-close js-close"></a>
+          <img src="img/icon-okey.png"><br><br>
+          <p>Спасибо за обращение</p>
+          <p>Наш специалист свяжется с вами в течении 5 минут</p><br>
+          <hr class="thanks-hr">
+          <span class="thanks-copy">Компания “Агропрограмма”</span>
+        </div>
+        <!-- /.popup-inner -->
       </div>
 
       <div class="popup js-popup3">
         <div class="overlay"></div>
         <div class="popup__inner">
           <div class="icon-close js-close"></div>
-          <img src="img/popup-phone.png" alt="">
-          <p>Оставить заявку на запчасти</p>
+          <h1>Заявка на запасные части <br> для зерносушилки АТМ</h1>
           <form action="form.php" method="post">
             <div>
-              <input type="tel" name="phone" placeholder="Ваш телефон">
-              <input type="email" name="email" placeholder="E-mail">
+              <input type="text" name="name" placeholder="Ваше Имя">
+              <input type="tel" name="phone" placeholder="Телефон">
               <input type="hidden" name="popup" value="Заявка на запчасти">
             </div>
-            <button class="btn btn--red" type="submit">Оставить</button>
+            <button class="btn btn--red" type="submit">Отправить</button>
           </form>
         </div>
       </div>
@@ -51,8 +49,7 @@
         <div class="overlay"></div>
         <div class="popup__inner">
           <div class="icon-close js-close"></div>
-          <img src="img/popup-phone.png" alt="">
-          <p>Получить коммерческое предложение</p>
+          <p>Введите ваш телефон и E-mail, коммерческое предложение автоматически отправится на вашу почту</p>
           <form action="form.php" method="post">
             <div>
               <input type="tel" name="phone" placeholder="Ваш телефон">
@@ -85,14 +82,14 @@
         <div class="overlay"></div>
         <div class="popup__inner">
           <div class="icon-close js-close"></div>
-          <img src="img/popup-phone.png" alt="">
-          <p>Оставить заявку</p>
+          <p>Введите ваше имя и телефон,<br> наш специалист перезвонит вам в течении <strong>5 мин</strong></p>
           <form action="form.php" method="post">
             <div>
-              <input type="tel" name="phone" placeholder="Ваш телефон">
+              <input type="text" name="name" placeholder="Ваше Имя">
+              <input type="tel" name="phone" placeholder="Телефон">
               <input type="hidden" name="popup" value="Перезвоните мне">
             </div>
-            <button class="btn btn--red" type="submit">Оставить заявку</button>
+            <button class="btn btn--red" type="submit">Отправить</button>
           </form>
         </div>
       </div>
@@ -392,7 +389,7 @@
             <table style="margin-bottom: -1px" class="table-top">
               <tr>
                 <td>
-                  <p align="center"><strong>Наименование</strong></p>
+                  <p><strong>Наименование</strong></p>
                 </td>
                 <td colspan="8">
                   <p align="center"><strong>Значение</strong></p>
@@ -1005,33 +1002,34 @@
           <h1 class="section__heading">Контактная информация</h1>
           <hr class="section__hr">
 
-          <div class="map" id="js-map" style="width: 480px; height: 512px;" ">
-    <iframe src="https://api-maps.yandex.ru/frame/v1/-/CZsRvOo9 " width="480 " height="512 " frameborder="0 "></iframe>
-    </div> <!-- /.map -->
+          <div class="map" id="js-map" style="width: 480px; height: 512px;">
+            <iframe src="https://api-maps.yandex.ru/frame/v1/-/CZsRvOo9" width="480" height="512" frameborder="0"></iframe>
+          </div>
+          <!-- /.map -->
 
-    <div class="contact-info ">
-      <a href="tel:84732516841 " class="contact-info__phone ">8 (473)251-68-41</a>
-      <p><img src="img/icon-email.png " alt=" "></p>
-      <a href="mailto:Dmitry.agrosd@yandex.ru " class="contact-info__email ">Dmitry.agrosd@yandex.ru</a>
-      <p class="hr "><span><img src="img/icon-loc.png " alt=" "></span></p>
-      <p><address>г. Воронеж, ул. Революции 1905 г, 50Б</address></p>
-      <img src="img/grass.png " alt=" ">
-    </div> <!-- /.contact-info -->
+          <div class="contact-info">
+            <a href="tel:84732516841" class="contact-info__phone">8 (473)251-68-41</a>
+            <p><img src="img/icon-email.png" alt=""></p>
+            <a href="mailto:Dmitry.agrosd@yandex.ru" class="contact-info__email">Dmitry.agrosd@yandex.ru</a>
+            <p class="hr"><span><img src="img/icon-loc.png" alt=""></span></p>
+            <p><address>г. Воронеж, ул. Революции 1905 г, 50Б</address></p>
+            <img src="img/grass.png" alt="">
+          </div>
+          <!-- /.contact-info -->
 
-    <div class="logo "><img src="img/footer-logo.png " alt=" "></div>
-    <p class="copy ">2016. Продажа мобильных зерносушилок АТМ. <a href=" ">Политика конфиденциальности</a></p>
+          <div class="logo"><img src="img/footer-logo.png" alt=""></div>
+          <p class="copy">2016. Продажа мобильных зерносушилок АТМ. <a href="">Политика конфиденциальности</a></p>
 
-  </div> <!-- /.container -->
-</footer>
-
-
-
+        </div>
+        <!-- /.container -->
+      </footer>
 
     </div>
     <!-- END content -->
 
     <!-- BEGIN scripts -->
-    <script type="text/javascript " src="js/app.js "></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
+
 </html>

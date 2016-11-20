@@ -1,29 +1,27 @@
 <a href="#x" class="thanks-overlay" id="thanks"></a>
 <div class="thanks-popup">
-  <center>
-    <img src="img/th.png"><br><br>
-    <span style="font-family:HelveticaNeueCyr-Light;text-align:center;font-size:32px;color:#000;">Спасибо! Ваша заявка отправлена!</span><br>
-    <span style="font-family:HelveticaNeueCyr-Light;font-size:16px;color:#000;">Наш специалист перезвонит Вам  в течении 10 минут.</span> <br>
-    <div style="position:fixed;top:-39px;margin-left:205px;left:50%;">
-      <a class="close" title="Закрыть" href="#close"><img src="img/close-thanks.png" class="b69"></a>
-    </div>
-  </center>
-  <a class="close" title="Закрыть" href="#close"></a>
+  <div class="popup__inner">
+    <a href="#close" class="icon-close js-close"></a>
+    <img src="img/icon-okey.png"><br><br>
+    <p>Спасибо за обращение</p>
+    <p>Наш специалист свяжется с вами в течении 5 минут</p><br>
+    <hr class="thanks-hr">
+    <span class="thanks-copy">Компания “Агропрограмма”</span>
+  </div> <!-- /.popup-inner -->
 </div>
 
 <div class="popup js-popup3">
   <div class="overlay"></div>
   <div class="popup__inner">
     <div class="icon-close js-close"></div>
-    <img src="img/popup-phone.png" alt="">
-    <p>Оставить заявку на запчасти</p>
+    <h1>Заявка на запасные части <br> для зерносушилки АТМ</h1>
     <form action="form.php" method="post">
       <div>
-        <input type="tel" name="phone" placeholder="Ваш телефон">
-        <input type="email" name="email" placeholder="E-mail">
+        <input type="text" name="name" placeholder="Ваше Имя">
+        <input type="tel" name="phone" placeholder="Телефон">
         <input type="hidden" name="popup" value="Заявка на запчасти">
       </div>
-      <button class="btn btn--red" type="submit">Оставить</button>
+      <button class="btn btn--red" type="submit">Отправить</button>
     </form>
   </div>
 </div>
@@ -32,8 +30,7 @@
   <div class="overlay"></div>
   <div class="popup__inner">
     <div class="icon-close js-close"></div>
-    <img src="img/popup-phone.png" alt="">
-    <p>Получить коммерческое предложение</p>
+    <p>Введите ваш телефон и E-mail, коммерческое предложение автоматически отправится на вашу почту</p>
     <form action="form.php" method="post">
       <div>
         <input type="tel" name="phone" placeholder="Ваш телефон">
@@ -67,14 +64,14 @@
   <div class="overlay"></div>
   <div class="popup__inner">
     <div class="icon-close js-close"></div>
-    <img src="img/popup-phone.png" alt="">
-    <p>Оставить заявку</p>
+    <p>Введите ваше имя и телефон,<br> наш специалист перезвонит вам в течении <strong>5 мин</strong></p>
     <form action="form.php" method="post">
       <div>
-        <input type="tel" name="phone" placeholder="Ваш телефон">
+        <input type="text" name="name" placeholder="Ваше Имя">
+        <input type="tel" name="phone" placeholder="Телефон">
         <input type="hidden" name="popup" value="Перезвоните мне">
       </div>
-      <button class="btn btn--red" type="submit">Оставить заявку</button>
+      <button class="btn btn--red" type="submit">Отправить</button>
     </form>
   </div>
 </div>
